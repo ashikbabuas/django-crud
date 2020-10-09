@@ -1,0 +1,19 @@
+{% extends 'Item/base.html' %}
+
+{% block content %}
+
+{{ item.title }}
+
+<form method="POST">
+  {% csrf_token %}
+{{ form.as_p }}
+<button type="submit">save</button>
+</form>
+
+<form method="POST" action="{% url 'deleteitem' item.id %}">
+  {% csrf_token %}
+<button type="submit">delete</button>
+</form>
+
+
+{% endblock %}

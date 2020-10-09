@@ -1,0 +1,15 @@
+{% extends 'Item/base.html' %}
+
+{% block content %}
+
+{% for item in items %}
+
+
+<br>
+<a href="{% url 'viewitem' item.id %}">{{item.title}} </a>
+
+{% endfor %}
+
+<br>
+<a role="button" href="{% url 'createitem' %}"><b>New Todo</b></a>
+{% endblock %}
