@@ -5,7 +5,7 @@ class Item(models.Model):
     title = models.CharField(max_length=100)
     price = models.IntegerField(max_length=10)
     created = models.DateTimeField(auto_now_add=True)
-    #image = models.ImageField(upload_to ='uploads/')
+    #image = models.ImageField()
     owner = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
